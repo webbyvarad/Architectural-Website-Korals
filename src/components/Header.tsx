@@ -12,7 +12,7 @@ export default function Header() {
     ["rgba(255, 255, 255, 0)", "rgba(255, 255, 255, 0.6)"]
   );
   
-  const backdropBlur = useTransform(
+  const backdropFilter = useTransform(
     scrollYProgress,
     [0, 0.05],
     ["blur(0px)", "blur(24px)"]
@@ -26,7 +26,7 @@ export default function Header() {
 
   return (
     <motion.header 
-      style={{ backgroundColor, backdropBlur }}
+      style={{ backgroundColor, backdropFilter }}
       className="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 py-4 md:px-12 transition-colors duration-300 border-b border-black/5"
     >
       <motion.div 
